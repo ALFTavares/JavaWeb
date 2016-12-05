@@ -7,13 +7,13 @@ import java.awt.event.ActionListener;
  * Created by Paulo Meira on 31/08/2016.
  */
 
-//O evento È processado na mesma classe onde o listener se registou
+//O evento √© processado na mesma classe onde o listener se registou
 public class ExemploActionEvent1 implements ActionListener{
 
     JFrame janela = new JFrame("ExemploActionEvent");
     JPanel painel = new JPanel();
-    JButton botao1 = new JButton("Bot„o 1");
-    JButton botao2 = new JButton("Bot„o 2");
+    JButton botao1 = new JButton("Bot√£o 1");
+    JButton botao2 = new JButton("Bot√£o 2");
     JLabel rotulo = new JLabel();
 
     public ExemploActionEvent1() {
@@ -28,32 +28,31 @@ public class ExemploActionEvent1 implements ActionListener{
 
 
         /*Registo do listener junto dos componentes botao1 e botao2*/
-    botao1.addActionListener(this);
-    botao2.addActionListener(this);
-}
+        botao1.addActionListener(this);
+        botao2.addActionListener(this);
+    }
 
     public static void main(String args[]){
         new ExemploActionEvent1();
     }
-        /*O evento È processado na classe onde o listener se registou. Neste caso, a classe "ExemploActionListener1".
-        Por este motivo, a classe "ExemploActionListener1" tem de implementar os mÈtodos da interface ActionListener**/
+        /*O evento √© processado na classe onde o listener se registou. Neste caso, a classe "ExemploActionListener1".
+        Por este motivo, a classe "ExemploActionListener1" tem de implementar os m√©todos da interface ActionListener**/
 
-        public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) {
         if (e.getSource() == botao1) {
             rotulo.setVisible(true);
 
-            rotulo.setText("Carregou no Bot„o 1!");
+            rotulo.setText("Carregou no Bot√£o 1!");
         }
 
         if (e.getSource() == botao2) {
             rotulo.setVisible(false);
-            JOptionPane.showMessageDialog(janela, "Carregou no Bot„o 2!");
+            JOptionPane.showMessageDialog(janela, "Carregou no Bot√£o 2!");
 
         }
     }
 
 
-    }
-
+}
 
 

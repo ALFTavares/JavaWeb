@@ -2,21 +2,21 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/*Tal como na 2™ vers„o, o evento È processado numa classe diferente daquela onde o listener se registou. No entanto
-ao contr·rio da classe "ExemploActionListener2", a classe "ExemploActionListener4" estende a classe "JFrame"
+/*Tal como na 2¬™ vers√£o, o evento √© processado numa classe diferente daquela onde o listener se registou. No entanto
+ao contr√°rio da classe "ExemploActionListener2", a classe "ExemploActionListener4" estende a classe "JFrame"
    */
 public class ExemploActionEvent4 extends JFrame {
-    /*N„o È necess·rio criar um contentor JFrame porque a classe
+    /*N√£o √© necess√°rio criar um contentor JFrame porque a classe
     "ExemploActionEvent4" estende a classe "JFrame"*/
 
     JPanel painel = new JPanel();
-    JButton botao1 = new JButton("Bot„o 1");
-    JButton botao2 = new JButton("Bot„o 2");
+    JButton botao1 = new JButton("Bot√£o 1");
+    JButton botao2 = new JButton("Bot√£o 2");
     JLabel rotulo = new JLabel();
 
     public ExemploActionEvent4() {
-        /*Uma vez que a classe "ExemploActionEvent4" estende a classe "JFrame", poder-se-· colocar
-        a palavra reservada this atr·s dos mÈtodos que definem as caracterÌsticas da janela*/
+        /*Uma vez que a classe "ExemploActionEvent4" estende a classe "JFrame", poder-se-√° colocar
+        a palavra reservada this atr√°s dos m√©todos que definem as caracter√≠sticas da janela*/
 
         setSize(300, 150);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,21 +36,21 @@ public class ExemploActionEvent4 extends JFrame {
     public static void main(String args[]) {
         new ExemploActionEvent4();
     }
-    /* O evento È processado numa classe diferente daquela onde o listener se registou.
+    /* O evento √© processado numa classe diferente daquela onde o listener se registou.
      Neste caso, a classe interna "ProcessaBotoes". Por este motivo, a classe "ProcessaBotoes" tem de implementar
-     os mÈtodos da interface "ActionListener"
+     os m√©todos da interface "ActionListener"
      */
 
     private class ProcessaBotoes implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == botao1) {
                 rotulo.setVisible(true);
-                rotulo.setText("Carregou no Bot„o 1!");
+                rotulo.setText("Carregou no Bot√£o 1!");
             }
 
             if (e.getSource() == botao2) {
                 rotulo.setVisible(false);
-                JOptionPane.showMessageDialog(null, "Carregou no Bot„o 2!");
+                JOptionPane.showMessageDialog(null, "Carregou no Bot√£o 2!");
 
             }
         }
